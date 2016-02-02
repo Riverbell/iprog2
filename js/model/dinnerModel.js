@@ -3,7 +3,8 @@ var DinnerModel = function() {
  
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
-
+	this.menu = { starter: null, main: null, dessert: null };
+	//tanken är att id läggs in på varje rätt
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
@@ -19,32 +20,54 @@ var DinnerModel = function() {
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 		//TODO Lab 2
+
+		// return id from this.menu[key] = type
+		// också använda getDish(id)
 	}
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
 		//TODO Lab 2
+		
+		// return id from this.menu
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
 		//TODO Lab 2
+		// for type(?) in this.menu 
+				//for ingredients in type
+						//for ingredient in ingredients
+							//return ingredient
+							//lista.append(ingredient) =[]
+		//return lista
+
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
 		//TODO Lab 2
+		//price = 0
+			//for ingredient in this.ingredients
+				//price += ingredient.price
+				//total_price = price * this.NumberOfGuests
+		//return total_price
+
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		//TODO Lab 2 
+		// Check what type the dish is
+		// lägg in i this.menu på den typens plats (skriv över om det finns annat)
 	}
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
 		//TODO Lab 2
+		// for-loop genom menu efter rätt id, om det hittar, sätt till null
+		//
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
