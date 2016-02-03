@@ -36,7 +36,7 @@ var DinnerModel = function() {
 
     	for (var i = 0; i < this.menu.length; i++) {
       		//if we want to return objects
-      		//fullMenu.push(this.getDish(i));
+      		//fullMenu.push(this.getDish(this.menu[i]));
       
       		//if we want to return dish-id
       		fullMenu.push(this.menu[i]);
@@ -59,13 +59,28 @@ var DinnerModel = function() {
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
-	this.getTotalMenuPrice = function() {
+	this.getTotalMenuPrice = function() { //Emma
 		//TODO Lab 2
 		//price = 0
 			//for ingredient in this.ingredients
 				//price += ingredient.price
 				//total_price = price * this.NumberOfGuests
 		//return total_price
+    var menuPrice = 0;
+    for (var i = 0; i < this.menu.length; i++) {
+      	//get the current dish in the menu
+      	var currentDish = this.getDish(this.menu[i]);
+        
+        //for each ingredient, add price to menuPrice
+        var ingredientLength = currentDish.ingredients.length;
+        for (var j=0; j < ingredientLength; j++) {
+          menuPrice = menuPrice + currentDish.ingredients[j].price;
+        }        
+      
+    }
+    
+    //multiply ingredient price by number of guests
+    return menuPrice * this.getNumberOfGuests();
 
 	}
 
