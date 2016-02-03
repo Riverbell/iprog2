@@ -20,7 +20,17 @@ var DinnerModel = function() {
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 		//TODO Lab 2
+		//Runs through menu
+        for (var i = 0; i < this.menu.length; i++) {
+        	//Using getDish func (provide id) to get dish-object back
+          var currentDish = this.getDish(this.menu[i]);
+          //If the dish type is equal to the provided type the dish 
+          //id is returned
+          if (currentDish.type === type){
+            return currentDish.id;           
+          }
 
+        }
 		// return id from this.menu[key] = type
 		// också använda getDish(id)
 	}
