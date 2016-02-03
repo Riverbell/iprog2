@@ -26,7 +26,7 @@ var DinnerModel = function() {
 	}
 
 	//Returns all the dishes on the menu.
-  	this.getFullMenu = function() { //Emma
+  	this.getFullMenu = function() { 
     	//TODO Lab 2
 
     	// return id from this.menu
@@ -59,7 +59,7 @@ var DinnerModel = function() {
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
-	this.getTotalMenuPrice = function() { //Emma
+	this.getTotalMenuPrice = function() { 
 		//TODO Lab 2
 		//price = 0
 			//for ingredient in this.ingredients
@@ -93,11 +93,18 @@ var DinnerModel = function() {
 	}
 
 	//Removes dish from menu
-	this.removeDishFromMenu = function(id) {
+	this.removeDishFromMenu = function(id) { 
 		//TODO Lab 2
 		// for-loop genom menu efter rätt id, om det hittar, sätt till null
-		//
-	}
+    
+	    var menuLength = this.menu.length;
+	    //iterate through the menu and look for the id. Set to null
+	    for (var i = 0; i < menuLength; i++) {
+	      if (this.menu[i] === id) {
+	        this.menu[i] = null;
+	      }  
+	    }
+   }
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
