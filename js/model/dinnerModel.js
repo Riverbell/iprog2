@@ -59,7 +59,26 @@ var DinnerModel = function() {
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
 		//TODO Lab 2
-		// for type(?) in this.menu 
+        //Make a list to store all ingredients
+        var allIngredients = [];
+      
+        //for-loop to run through each dish in the menu 
+    	for (var i in this.menu) {
+            var getCurrentDish = this.getDish(this.menu[i]);
+
+            //get ingredients from each dish object
+            var ingrs = getCurrentDish.ingredients;
+        
+            //run through 
+            for (var j in ingrs){
+                var ingr = ingrs[j].name
+                allIngredients.push(ingr);
+          }
+     
+        }
+      	return allIngredients;
+		
+      // for type(?) in this.menu
 				//for ingredients in type
 						//for ingredient in ingredients
 							//return ingredient
@@ -67,6 +86,7 @@ var DinnerModel = function() {
 		//return lista
 
 	}
+
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() { 
