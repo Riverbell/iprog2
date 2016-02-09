@@ -14,7 +14,7 @@
 
   </head>
   <body>
-	<div class="container-fluid" id="exampleView"> <!-- full width container -->
+	<div class="container-fluid" id="allDishesView"> <!-- full width container -->
 		<div class="row" id="header"> <!-- full width row -->
 			<h1>HOMELETTE <small>From the best chefs in the world directly into your kitchen</small></h1>
 		</div>
@@ -58,7 +58,7 @@
 				</form>
 			</div>
 			<div class="col-md-10">
-				<div class="allDishes row">
+				<div class="allDishes row" id="allDishes">
 					<div class="dish-container">
 						<div class="dish-image">
 							<img src="images/toast.jpg"/>
@@ -107,7 +107,8 @@
 	<!-- The application JavaScript code -->
 	<script src="js/app.js"></script>
 	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
+	<script src="js/view/allDishesView.js"></script>
+	<script src="js/view/dishInfoView.js"></script>
 	<script src="js/view/exampleViewController.js"></script>
   </body>
 </html>
