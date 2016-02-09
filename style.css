@@ -23,6 +23,7 @@ body {
 	border-color: #FF8B00;
 	color: #000;
 }
+
 .btn-primary:hover {
 	background: #FF9619;
 	color: #000;
@@ -122,3 +123,42 @@ td.border-top {
 	border-bottom: 1px solid black;
 }
 #ingredients td { border: none;}
+
+
+/*
+*	dinnerOverview specific ==================
+*/
+#myDinner {
+	background: rgba(255,231,100,0.6);
+	padding: 10px 20px 20px;
+}
+
+.horizontalLine {
+	border: 1px solid black;
+	margin-top: 2px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.dish-price {
+	text-align: right;
+	padding: 5px 0;
+	margin-bottom: 5px;
+}
+
+.placing {
+	padding: 2%;
+}
+
+.vertical {
+	vertical-align: left;
+	border-left: 2px solid black;
+	height: 200px; 
+	padding: 0 14px;
+
+}
+.leftAlign {
+	text-align: left;
+	padding: 5px 0;
+	margin-top: 155px;
+}
