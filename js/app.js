@@ -3,6 +3,9 @@ $(function() {
 	var model = new DinnerModel();
 	
 	//And create the needed controllers and views
-	var exampleView = new ExampleView($("#exampleView"));
+
+	var allDishesView = new AllDishesView($("#allDishesView"), model);
+
+	var dishInfoView = new DishInfoView($("#dishInfoView"), model);
 
 });
