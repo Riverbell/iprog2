@@ -31,17 +31,11 @@ var DinnerModel = function() {
           }
 
         }
-		// return id from this.menu[key] = type
-		// också använda getDish(id)
 	}
 
 	//Returns all the dishes on the menu.
   	this.getFullMenu = function() { 
     	//TODO Lab 2
-
-    	// return id from this.menu
-    	//return this.getDish(1);
-
     	var fullMenu = [];
 
     	for (var i = 0; i < this.menu.length; i++) {
@@ -77,40 +71,27 @@ var DinnerModel = function() {
      
         }
       	return allIngredients;
-		
-      // for type(?) in this.menu
-				//for ingredients in type
-						//for ingredient in ingredients
-							//return ingredient
-							//lista.append(ingredient) =[]
-		//return lista
-
 	}
 
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() { 
 		//TODO Lab 2
-		//price = 0
-			//for ingredient in this.ingredients
-				//price += ingredient.price
-				//total_price = price * this.NumberOfGuests
-		//return total_price
-    var menuPrice = 0;
-    for (var i = 0; i < this.menu.length; i++) {
-      	//get the current dish in the menu
-      	var currentDish = this.getDish(this.menu[i]);
-        
-        //for each ingredient, add price to menuPrice
-        var ingredientLength = currentDish.ingredients.length;
-        for (var j=0; j < ingredientLength; j++) {
-          menuPrice = menuPrice + currentDish.ingredients[j].price;
-        }        
-      
-    }
+	    var menuPrice = 0;
+	    for (var i = 0; i < this.menu.length; i++) {
+	      	//get the current dish in the menu
+	      	var currentDish = this.getDish(this.menu[i]);
+	        
+	        //for each ingredient, add price to menuPrice
+	        var ingredientLength = currentDish.ingredients.length;
+	        for (var j=0; j < ingredientLength; j++) {
+	          menuPrice = menuPrice + currentDish.ingredients[j].price;
+	        }        
+	      
+	    }
     
-    //multiply ingredient price by number of guests
-    return menuPrice * this.getNumberOfGuests();
+    	//multiply ingredient price by number of guests
+    	return menuPrice * this.getNumberOfGuests();
 
 	}
 
@@ -121,11 +102,6 @@ var DinnerModel = function() {
 		//TODO Lab 2 
       var dishType = this.getDish(id).type;
 
-      /*for (var a in this.menu) {
-        var menuDishType = this.getDish(this.menu[a]).type;
-        if (menuDishType === dishType) {
-         this.menu[a] = id;
-        } */
       //Depending on what type of dish, the new dish will overwrite the old one
       if (dishType === 'starter'){
            this.menu[0] = id;
@@ -135,16 +111,12 @@ var DinnerModel = function() {
             this.menu[2] = id;
           
       }  
-		// Check what type the dish is
-		// lägg in i this.menu på den typens plats (skriv över om det finns annat)
 	}
 
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) { 
-		//TODO Lab 2
-		// for-loop genom menu efter rätt id, om det hittar, sätt till null
-    
+		//TODO Lab 2    
 	    var menuLength = this.menu.length;
 	    //iterate through the menu and look for the id. Set to null
 	    for (var i = 0; i < menuLength; i++) {
@@ -176,9 +148,6 @@ var DinnerModel = function() {
 	  });	
 	}
 
-	this.getAllDishes2 = function () {
-		return $(dishes);
-	}
 
 	//function that returns a dish of specific ID
 	this.getDish = function (id) {

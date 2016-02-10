@@ -9,7 +9,7 @@ var DishInfoView = function (container, model) {
 	this.dishInfo = container.find("#dishInfo");
 	this.ingredientTable = container.find("#ingredientTable");
 
-	var id = 200;
+	var id = 1;
 
 	dish = model.getDish(id);
 	//console.log(dish.name);
@@ -50,7 +50,7 @@ var DishInfoView = function (container, model) {
 						+ "<td class='total border-top' id='totalPrice'>X</td>"
 					+ "</tr>";
 
-	console.log(ingredientList);
+	//console.log(ingredientList);
 
 	// update the ingredient table with the ingredient list
 	this.ingredientTable.html(ingredientList);

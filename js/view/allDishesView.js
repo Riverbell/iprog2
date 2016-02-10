@@ -7,9 +7,8 @@ var AllDishesView = function (container, model) {
 	this.allDishes = container.find("#allDishes");
 
 	//gets all dishes
-	var dishes = model.getAllDishes2();
+	var dishes = model.getAllDishes('starter');
 	//console.log(dishes);
-
 
 	var dishString = " ";
 
