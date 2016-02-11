@@ -3,7 +3,7 @@ var DinnerModel = function() {
  
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
-	this.menu = [null, null, null];
+	this.menu = [1, 100, 200];
 	//tanken är att id läggs in på varje rätt
 
 	this.setNumberOfGuests = function(num) {
@@ -157,6 +157,21 @@ var DinnerModel = function() {
 			}
 		}
 	}
+
+	this.getDishPrice = function (id) {
+		var dishPrice = 0; 
+        for (i in dishes) {
+          if (dishes[i].id === id) {
+            var currentDish = dishes[i];
+            var currIngredients = currentDish.ingredients;
+            for (j in currIngredients) {
+              var price = currIngredients[j].price;
+              dishPrice = dishPrice + price;
+            }
+          }
+        }
+      return dishPrice;
+    }
 
 
 	// the dishes variable contains an array of all the 
