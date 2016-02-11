@@ -4,7 +4,7 @@ var DinnerModel = function() {
 	// and selected dinner options for dinner menu
 
 	this.menu = [1, 100, 200];
-	this.NumberOfGuests = 0;
+	this.NumberOfGuests = 1;
 	//tanken är att id läggs in på varje rätt
 
 	this.setNumberOfGuests = function(num) {
