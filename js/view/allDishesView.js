@@ -4,14 +4,17 @@ var AllDishesView = function (container, model) {
 	// Get all the relevant elements of the view (ones that show data
   	// and/or ones that responed to interaction)
 
-	this.allDishes = container.find("#allDishes");
+	var dishContainer = this.dishContainer = container.find("#allDishes");
 	
+	this.currType = String(container.find("#dishType option:selected").val());
+	console.log(this.currType);
+	var dishes = model.getAllDishes(this.currType);
+	
+
 	// function that loads all the dishes
 	var loadDishes = function() {
-		this.currType = String(container.find("#dishType option:selected").val());
 		
 		//gets all dishes
-		var dishes = model.getAllDishes(this.currType);
 		//console.log(this.currType);
 
 		var dishString = " ";
@@ -26,7 +29,7 @@ var AllDishesView = function (container, model) {
 		}
 		//console.log(dishString);
 
-		this.allDishes.html(dishString);
+		dishContainer.html(dishString);
 	}
 
 	// load dishes on initialization
