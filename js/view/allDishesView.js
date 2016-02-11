@@ -7,7 +7,6 @@ var AllDishesView = function (container, model) {
 	var dishContainer = this.dishContainer = container.find("#allDishes");
 	
 	this.currType = String(container.find("#dishType option:selected").val());
-	console.log(this.currType);
 	var dishes = model.getAllDishes(this.currType);
 	
 
