@@ -1,8 +1,9 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
- 
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
+
+	// our menu
 	this.menu = [null, null, null];
 	//tanken är att id läggs in på varje rätt
 
