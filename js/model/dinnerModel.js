@@ -5,6 +5,7 @@ var DinnerModel = function() {
 
 	// our menu
 	this.menu = [null, null, null];
+	this.NumberOfGuests = 0;
 	//tanken är att id läggs in på varje rätt
 
 	this.setNumberOfGuests = function(num) {
@@ -41,10 +42,10 @@ var DinnerModel = function() {
 
     	for (var i = 0; i < this.menu.length; i++) {
       		//if we want to return objects
-      		//fullMenu.push(this.getDish(this.menu[i]));
+      		fullMenu.push(this.getDish(this.menu[i]));
       
       		//if we want to return dish-id
-      		fullMenu.push(this.menu[i]);
+      		//fullMenu.push(this.menu[i]);
     }
 
     return fullMenu; 
