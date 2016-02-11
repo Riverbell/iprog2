@@ -40,13 +40,13 @@ var DinnerModel = function() {
     	var fullMenu = [];
 
     	for (var i = 0; i < this.menu.length; i++) {
+
       		//if we want to return objects
       		fullMenu.push(this.getDish(this.menu[i]));
       
       		//if we want to return dish-id
       		//fullMenu.push(this.menu[i]);
     }
-
     return fullMenu; 
 
   }
