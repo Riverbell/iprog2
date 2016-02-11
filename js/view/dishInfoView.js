@@ -9,7 +9,7 @@ var DishInfoView = function (container, model) {
 	this.dishInfo = container.find("#dishInfo");
 	this.ingredientTable = container.find("#ingredientTable");
 
-	var id = 1;
+	var id = 101;
 
 	dish = model.getDish(id);
 	//console.log(dish.name);
@@ -47,7 +47,7 @@ var DishInfoView = function (container, model) {
 							+ "<button class='btn btn-primary btn-sm'>Confirm dish</button>"
 						+ "</td>"
 						+ "<td class='border-top'>SEK</td>"
-						+ "<td class='total border-top' id='totalPrice'>X</td>"
+						+ "<td class='total border-top' id='totalPrice'>" + String(model.getDishPrice(dish.id)) + "</td>"
 					+ "</tr>";
 
 	//console.log(ingredientList);
