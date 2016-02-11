@@ -8,4 +8,7 @@ $(function() {
 
 	var dishInfoView = new DishInfoView($("#dishInfoView"), model);
 
+	var fullMenuView = new FullMenuView($("#fullMenuView"), model);
+
+	var dinnerOverviewView = new DinnerOverviewView($("#dinnerOverviewView"), model);
 });
